@@ -6,7 +6,7 @@
 /*   By: ulyssezyberaj <ulyssezyberaj@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 16:52:49 by ulyssezyber       #+#    #+#             */
-/*   Updated: 2026/07/16 16:52:50 by ulyssezyber      ###   ########.fr       */
+/*   Updated: 2026/10/16 17:16:43 by ulyssezyber      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #include "Serializer.hpp"
 
 #include <iostream>
+
+// Programme de test : on verifie que serialize puis deserialize renvoie le meme
+// pointeur et que l'objet Data reste lisible et modifiable
 
 // Affiche le contenu d'un objet Data pour verifier qu'il reste utilisable.
 static void	printData(const Data& data, const std::string& label)
@@ -23,9 +26,6 @@ static void	printData(const Data& data, const std::string& label)
 	std::cout << "  name   = " << data.name << std::endl;
 	std::cout << "  active = " << (data.active ? "true" : "false") << std::endl;
 }
-
-// Programme de test pour l'exercice 01.
-// Chaque section illustre un point du sujet en lançant ./serializer.
 
 int	main()
 {
@@ -100,10 +100,10 @@ int	main()
 		std::cout << "ERREUR : mauvais pointeurs apres deserialization" << std::endl;
 	std::cout << std::endl;
 
-	// === Test 5 : objet alloue sur le tas (new/delete) ===
+	// === Test 5 : objet alloue sur la heap (new/delete) ===
 	// Sujet : le mecanisme doit fonctionner aussi avec un pointeur heap.
 	// Attendu : egalite des pointeurs + donnees lisibles, sans fuite memoire.
-	std::cout << "=== Test 5 : Data sur le tas (new/delete) ===" << std::endl;
+	std::cout << "=== Test 5 : Data sur la heap (new/delete) ===" << std::endl;
 	Data*		heap = new Data();
 	heap->number = 7;
 	heap->name = "Heap";

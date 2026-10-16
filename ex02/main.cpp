@@ -6,7 +6,7 @@
 /*   By: ulyssezyberaj <ulyssezyberaj@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 16:53:40 by ulyssezyber       #+#    #+#             */
-/*   Updated: 2026/07/16 16:53:41 by ulyssezyber      ###   ########.fr       */
+/*   Updated: 2026/10/16 17:39:12 by ulyssezyber      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@
 #include "C.hpp"
 
 #include <iostream>
-
-// Programme de test pour l'exercice 02.
-// Chaque section illustre un point du sujet en lançant ./identify.
 
 int	main()
 {

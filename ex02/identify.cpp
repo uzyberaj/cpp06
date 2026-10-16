@@ -6,7 +6,7 @@
 /*   By: ulyssezyberaj <ulyssezyberaj@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 16:53:27 by ulyssezyber       #+#    #+#             */
-/*   Updated: 2026/07/16 16:53:28 by ulyssezyber      ###   ########.fr       */
+/*   Updated: 2026/10/16 17:37:19 by ulyssezyber      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 #include <ctime>
 #include <exception>
 #include <iostream>
+
+// Les classes sont vides : il n’y a pas de méthode virtuelle "identify" dans la classe.
+// On identifie à l’extérieur avec dynamic_cast > but de l’exercice.
 
 // Cree au hasard un objet A, B ou C sur le tas et le renvoie comme Base*.
 // Le sujet laisse libre le choix du generateur aleatoire : on utilise rand().
@@ -61,6 +64,11 @@ void	identify(Base* p)
 
 // Version reference : dynamic_cast echoue avec une exception (bad_cast).
 // Le sujet interdit d'utiliser un pointeur dans cette fonction.
+
+// 2 versions car c'est la règle du langage C++ :
+// pointeur > échec silencieux (NULL) ;
+// référence > pas de "référence nulle" > exception.
+
 void	identify(Base& p)
 {
 	try

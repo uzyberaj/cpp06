@@ -6,7 +6,7 @@
 /*   By: ulyssezyberaj <ulyssezyberaj@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 16:52:24 by ulyssezyber       #+#    #+#             */
-/*   Updated: 2026/07/16 16:52:25 by ulyssezyber      ###   ########.fr       */
+/*   Updated: 2026/10/16 16:46:26 by ulyssezyber      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,8 @@ static void	runTest(const std::string& label, const std::string& literal)
 	std::cout << std::endl;
 }
 
-// Programme de test pour l'exercice 00.
 // Usage normal (comme dans le sujet) : ./convert <litteral>
-// Sans argument : lance tous les tests documentes du sujet.
+// Sans argument : lance tous les tests
 int	main(int argc, char** argv)
 {
 	if (argc == 2)
